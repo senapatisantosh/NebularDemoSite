@@ -10,7 +10,6 @@ import {
 } from '@nebular/auth';
 
 export const routes: Routes = [
-  { path: 'PAS', loadChildren: () => import('./pas/pas.module').then(m => m.PASModule) },
   {
     path: 'pages',
     loadChildren: () => import('./pages/pages.module')
@@ -46,8 +45,8 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'PAS', pathMatch: 'full' },
-  { path: '**', redirectTo: 'PAS' },
+  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '**', redirectTo: 'pages' },
 ];
 
 const config: ExtraOptions = {
